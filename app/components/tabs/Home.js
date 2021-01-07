@@ -3,6 +3,9 @@ import {StyleSheet, View, ScrollView, Text} from 'react-native';
 
 import {title} from '../../styles/index';
 
+// TODO : implement https://github.com/terrillo/rn-apple-healthkit
+// TODO : read https://www.dieproduktmacher.com/blog/fitness-app-react-native
+
 const Home = () => {
   return (
     <View style={styles.container}>
