@@ -8,6 +8,8 @@ target 'ActivityStatistics' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNLocalize', :path => '../node_modules/react-native-localize'
+
   target 'ActivityStatisticsTests' do
     inherit! :complete
     # Pods for testing

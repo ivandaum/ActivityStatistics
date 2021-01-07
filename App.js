@@ -1,11 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, StatusBar} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 
-import Home from './app/components/tabs/Home';
+import Home from './app/components/pages/Home';
 
+import {setI18nConfig} from './app/helpers/Locale';
 import {backgroundColor} from './app/styles/index';
 
 const App = () => {
+  setI18nConfig();
   return (
     <View style={styles.app}>
       <Home />
@@ -18,7 +20,6 @@ export default App;
 const styles = StyleSheet.create({
   app: {
     backgroundColor,
-    marginTop: StatusBar.currentHeight,
     flex: 1,
   },
 });
