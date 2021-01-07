@@ -19,6 +19,7 @@
 		4CFE0416994C366B2FB2D07B /* libPods-ActivityStatistics-ActivityStatisticsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A146AA84E6A3D176FBC50B1 /* libPods-ActivityStatistics-ActivityStatisticsTests.a */; };
 		53BCF710129BF4051FBAB8F4 /* libPods-ActivityStatistics-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D95A29A71F75417A33438F5 /* libPods-ActivityStatistics-tvOS.a */; };
 		72AB2105C911150CF05628C8 /* libPods-ActivityStatistics-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC7EAAB0C8E48675ACDCFC13 /* libPods-ActivityStatistics-tvOSTests.a */; };
+		79C9ED3025A72CDB00F38172 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C9ED2F25A72CDB00F38172 /* HealthKit.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		52E438613F50B097A67BE6B7 /* libPods-ActivityStatistics.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ActivityStatistics.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55664304334C59E678AD67D2 /* Pods-ActivityStatistics-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityStatistics-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ActivityStatistics-tvOS/Pods-ActivityStatistics-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		71AB3565B2FD950C1D8D2926 /* Pods-ActivityStatistics-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityStatistics-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ActivityStatistics-tvOSTests/Pods-ActivityStatistics-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79C9ED2E25A72CDA00F38172 /* ActivityStatistics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ActivityStatistics.entitlements; path = ActivityStatistics/ActivityStatistics.entitlements; sourceTree = "<group>"; };
+		79C9ED2F25A72CDB00F38172 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ActivityStatistics/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A146AA84E6A3D176FBC50B1 /* libPods-ActivityStatistics-ActivityStatisticsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ActivityStatistics-ActivityStatisticsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69902F14B14AC907849D81C /* Pods-ActivityStatistics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityStatistics.debug.xcconfig"; path = "Target Support Files/Pods-ActivityStatistics/Pods-ActivityStatistics.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				136247497A1CB044B12BE5A4 /* libPods-ActivityStatistics.a in Frameworks */,
+				79C9ED3025A72CDB00F38172 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +129,7 @@
 		13B07FAE1A68108700A75B9A /* ActivityStatistics */ = {
 			isa = PBXGroup;
 			children = (
+				79C9ED2E25A72CDA00F38172 /* ActivityStatistics.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -148,13 +153,13 @@
 				71AB3565B2FD950C1D8D2926 /* Pods-ActivityStatistics-tvOSTests.debug.xcconfig */,
 				2E0D3C50F0A5EAFB30108F45 /* Pods-ActivityStatistics-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79C9ED2F25A72CDB00F38172 /* HealthKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				52E438613F50B097A67BE6B7 /* libPods-ActivityStatistics.a */,
@@ -294,6 +299,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = N442WX92VD;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -655,7 +661,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ActivityStatistics/ActivityStatistics.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N442WX92VD;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ActivityStatistics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -678,7 +686,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ActivityStatistics/ActivityStatistics.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N442WX92VD;
 				INFOPLIST_FILE = ActivityStatistics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
