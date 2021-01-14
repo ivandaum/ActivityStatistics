@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet, View, StatusBar} from 'react-native';
 
 // TODO : implement https://github.com/agencyenterprise/react-native-health
 // TODO : read https://www.dieproduktmacher.com/blog/fitness-app-react-native
 
-import DaysWorkout from '../lists/DaysWorkout';
+import DaysList from '../lists/DaysList';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <DaysWorkout />
+      <DaysList />
     </View>
   );
 };

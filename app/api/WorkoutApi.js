@@ -49,18 +49,18 @@ const WorkoutApi = {
     WorkoutApi.getAll((results) => {
       results.map((entry) => {
         const d = getDate(entry.start);
-        const k = `${d.year}${d.month}${d.day}`;
+        const k = `${d.year}-${d.month}-${d.day}`;
 
         if (lastKey !== k) {
           days.push({
             date: d,
             key: k,
-            items: [],
+            workouts: [],
           });
           lastKey = k;
         }
 
-        days[days.length - 1].items.push(entry);
+        days[days.length - 1].workouts.push(entry);
       });
 
       complete(days);

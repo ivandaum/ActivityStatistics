@@ -24,10 +24,6 @@ export const getDate = (time) => {
   return {dayName, day, month, year};
 };
 
-export const getLetterMonth = (index) => {
-  return $t('months.' + index);
-};
+export const getMonthTrad = (index) => $t('months.' + index);
 
-export const getLetterDay = (index) => {
-  return $t('days.' + index);
-};
+export const getLetterTrad = (index) => $t('days.' + index);

@@ -1,4 +1,17 @@
 {
+  "bpm": "bpm",
+  "cal": "cal",
+  "fullDuration": "Durée totale",
+  "workoutsCount": "Nombre d'exercices",
+  "workouts": "Exercices",
+  "caloriesBurned": "Calories brûlées",
+
+  "minute": "minute",
+  "minutes": "minutes",
+  "hour": "heure",
+  "second": "seconde",
+  "day": "jour",
+
   "today": "Aujourd'hui",
   "yesterday": "Hier",
   "lastWeek": "La semaine dernière",
@@ -25,7 +38,7 @@
     "Novembre",
     "Décembre"
   ],
-  "workouts": {
+  "workoutsName": {
     "AmericanFootball": "Football Américain",
     "Archery": "Tir à l'arc",
     "AustralianFootball": "Football Australien",

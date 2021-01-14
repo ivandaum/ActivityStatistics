@@ -1,17 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
 import WorkoutApi from '../../api/WorkoutApi';
-import StatByDay from '../cards/StatByDay';
+import {formatDays} from '../../models/DayModel';
+import DayCard from '../cards/DayCard';
 
 const renderItem = ({item}) => {
-  return <StatByDay day={item} />;
+  return <DayCard day={item} />;
 };
-const DaysWorkout = () => {
-  const [days, setDays] = useState({});
 
-  WorkoutApi.sortByDay((results) => {
-    setDays(results);
-  });
+const DaysWorkout = () => {
+  const [days, setDays] = useState([]);
+
+  useEffect(() => {
+    WorkoutApi.sortByDay((results) => {
+      const formatedDays = formatDays(results);
+      setDays(formatedDays);
+    });
+  }, [days]);
 
   return (
     <FlatList
